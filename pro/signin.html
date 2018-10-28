@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>signup</title>
+    <style>
+    body{
+        background-image:url('ime/acc1.jpeg');
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #div1{
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width:450px;
+        margin-top:0.5%;
+        font-size:20px;
+        border-radius: 15px;
+      }
+      input[type=text],select{
+        font-size: 13px;
+        width:350px;
+        padding:12px 20px;
+        margin:8px 0;
+        border-radius: 15px;
+      }
+      input[type=password],select{
+        font-size: 13px;
+        width:350px;
+        padding:12px 20px;
+        margin:8px 0;
+        border-radius: 15px;
+      }
+      input[type=email],select{
+        font-size: 13px;
+        width:350px;
+        padding:12px 20px;
+        margin:8px 0;
+        border-radius: 15px;
+      }
+      input[type=submit]{
+        font-size: 15px;
+        width: 200px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 90px;
+        cursor: pointer;
+        border-radius: 15px;
+       }
+    </style>
+  </head>
+  <body>
+
+    <div id="div1">
+      <label><h1>SIGN UP</h1></label>
+    <form action="#" onsubmit="return validation()">
+      <label>Username:</label><br>
+      <input type="text" id="user" placeholder="Enter username"><br>
+      <span id="username"></span><br>
+      <label>Password:</label><br>
+      <input type="password" id="pass" placeholder="Enter password"><br>
+      <span id="password"></span><br>
+      <label>Confirm Password:</label><br>
+      <input type="password" id="conpass" placeholder="Enter confirm password"><br>
+      <span id="conpassword"></span><br>
+      <label>Mobile Number:</label><br>
+      <input type="text" id="mobileno"placeholder="Enter mobile number"><br>
+      <span id="mobilenumber"></span><br>
+      <label>Email:</label><br>
+      <input type="email" id="email" placeholder="Enter Email"><br>
+      <span id="emails"></span><br>
+      <input type="submit" value="SUBMIT">
+    </form>
+     <br><label>Go To </label><a href="home.html">Home</a> <br>
+      <label>Have Account</label> <a href="login.html">SIGN IN</a>
+  </div>
+
+    <script>
+
+    function validation(){
+      var user=document.getElementById("user").value;
+      var pass=document.getElementById("pass").value;
+      var conpass=document.getElementById("conpass").value;
+      var mobileno=document.getElementById("mobileno").value;
+      var email=document.getElementById("email").value;
+
+      if(user==""){
+        document.getElementById('username').innerHTML="**please fill user name";
+        return false;
+      }
+      if((user.length<=2) || (user.length>10)){
+        document.getElementById('username').innerHTML="**user name length should be between 2 to 10";
+        return false;
+      }
+      if(!isNaN(user)){
+        document.getElementById('username').innerHTML="**user name cannot be number";
+        return false;
+      }
+
+      if(pass==""){
+        document.getElementById('password').innerHTML="**enter password";
+        return false;
+      }
+     if((pass.length<=5) || (pass.length>15)){
+       document.getElementById('password').innerHTML="**password length should be between 5 to 15";
+       return false;
+     }
+
+      if(conpass==""){
+        document.getElementById('conpassword').innerHTML="**enter confirm password";
+        return false;
+      }
+      if(pass!=conpass){
+        document.getElementById('conpassword').innerHTML="**passwords are not matching";
+        return false;
+      }
+      if(mobileno==""){
+        document.getElementById('mobilenumber').innerHTML="**enter mobile number";
+        return false;
+      }
+      if(isNaN(mobileno)){
+        document.getElementById('mobilenumber').innerHTML="**mobile number only has numbers";
+        return false;
+      }
+      if(mobileno.lenght!=10){
+        document.getElementById('mobilenumber').innerHTML="**enter 10 digit mobile number";
+        return false;
+      }
+      if(email==""){
+        document.getElementById('emails').innerHTML="**enter email";
+        return false;
+      }
+     if(email.indexOf('@')==0){
+       document.getElementById('emails').innerHTML="**@ in invalid position";
+       return false;
+     }
+
+
+    }
+    </script>
+
+
+  </body>
+</html>

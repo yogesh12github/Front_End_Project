@@ -1,0 +1,76 @@
+<style>
+.container {
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    color: yellow;
+    padding: 6px 26px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.top-right {
+    position: fixed;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 0px 26px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #7FDBFF;
+    text-decoration: none;
+}
+
+
+
+
+#ind
+{
+    font-family: 'Baskerville Old Face';
+    color: #030f88;
+}
+
+
+.centered {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+
+
+</style>

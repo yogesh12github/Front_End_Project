@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <style>
+
+    body{
+        background-image:url('ime/acc1.jpeg');
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #div1{
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width:450px;
+        margin-top:3%;
+        font-size:30px;
+        border-radius: 15px;
+      }
+      input[type=text],select{
+        font-size: 20px;
+        width:350px;
+        padding:12px 20px;
+        margin:8px 0;
+        border-radius: 15px;
+      }
+      input[type=password],select{
+        font-size: 20px;
+        width:350px;
+        padding:12px 20px;
+        margin:8px 0;
+        border-radius: 15px;
+      }
+      input[type=text]:focus{
+        background-color: lightblue;
+      }
+      input[type=password]:focus{
+        background-color: lightblue;
+      }
+      input[type=submit]{
+        font-size: 20px;
+        width: 200px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 90px;
+        cursor: pointer;
+        border-radius: 15px;
+       }
+
+      }
+</style>
+  </head>
+  <body>
+
+       <div id="div1" >
+         <h3>SIGN IN</h3><br><br>
+           <form  action="#" onsubmit="return func1()">
+             Registration Number<br>
+             <input type="text" placeholder="registration number" id="id1" ><br>
+               <span id="id11"></span><br>
+             Password<br>
+             <input type="Password" placeholder="password" id="id2"><br>
+               <span id="id22"></span><br>
+             <input type="submit" value="SUBMIT">
+           </form><br><br>
+           Don't have account? <a href="signin.html">New User</a><br>
+            <a href="#">Lost your password ?   </a>|
+            <a href="home.html">Home</a>
+       </div>
+       <script>
+       function func1(){
+           var x=document.getElementById("id1").value;
+           var y=documnet.getElementById("id2").value;
+           if(x==""){
+             document.getElementById('id11').innerHTML="**Enter Registration Number";
+             return false;
+            }
+            if(isNaN(x)){
+              document.getElementById('id11').innerHTML="**Registration no should be number";
+              return false;
+            }
+         if(y=="")
+         {
+              document.getElementById('id22').innerHTML="**enter password";
+               return false;
+
+            }
+
+
+       }
+       </script>
+
+  </body>
+</html>

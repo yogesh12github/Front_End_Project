@@ -1,0 +1,26 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+#footer
+{   
+    bottom: 0;
+	color: white;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-size: 18px;
+	background: darkblue;
+}
+
+.show {display: block;}
+
+
+
+</style>
